@@ -1,101 +1,101 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gopal's Education Hub</title>
+    <title>Free Fire Diamond Generator - Test</title>
     <style>
-        /* Basic Styling */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            height: 100vh;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            height: 100vh;
+            margin: 0;
         }
-
-        .main-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
+        .container {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.2);
-            max-width: 400px;
-            width: 90%;
+            width: 350px;
         }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4500;
             text-transform: uppercase;
+            border: 2px solid #ff4500;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
-
-        .tagline {
-            font-style: italic;
-            margin-bottom: 30px;
-            opacity: 0.8;
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
-
-        /* Buttons Styling */
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .subject-btn {
-            padding: 15px 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: block;
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
             border: none;
+            outline: none;
+            text-align: center;
+        }
+        .btn {
+            background-color: #ff4500;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
         }
-
-        /* Subject Colors */
-        .physics { background: #3498db; }
-        .chemistry { background: #f39c12; }
-        .maths { background: #27ae60; }
-
-        /* Hover Effects */
-        .subject-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            filter: brightness(1.1);
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            opacity: 0.6;
+        .btn:hover {
+            background-color: #e63e00;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <h1>GOPAL</h1>
-        <p class="tagline">Digital Study Material</p>
-
-        <div class="btn-container">
-            <a href="physics.pdf" class="subject-btn physics">Physics Notes</a>
-            <a href="chemistry.pdf" class="subject-btn chemistry">Chemistry Notes</a>
-            <a href="maths.pdf" class="subject-btn maths">Maths Notes</a>
+    <div class="container">
+        <div class="logo">
+            Free Fire <br> Free Diamond
         </div>
 
-        <footer>Created by Gopal &copy; 2026</footer>
+        <h1>FREE DIAMOND</h1>
+
+        <p>Enter Amount (Max 10000):</p>
+        <input type="number" id="diamondInput" placeholder="Eg. 5000" min="1" max="10000">
+
+        <br>
+
+        <a href="f.html" class="btn" onclick="return validateInput()">Claim Now</a>
     </div>
+
+    <script>
+        function validateInput() {
+            var val = document.getElementById('diamondInput').value;
+            if (val === "" || val <= 0) {
+                alert("Please enter a valid number!");
+                return false;
+            }
+            if (val > 10000) {
+                alert("Maximum limit is 10000 diamonds!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
 </body>
 </html>
+
