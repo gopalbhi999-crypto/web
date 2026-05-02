@@ -3,70 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIAMOND SENT SUCCESSFULLY TO YOUR ACCOUNT</title>
+    <title>Congratulations - Success</title>
     <style>
-        body {
-            background-color: #1a1a1a;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Full screen background matching the index page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            color: white;
+            overflow: hidden;
         }
-        .container {
-            background-color: #2d2d2d;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 25px #28a745; /* Green shadow for success */
+
+        /* Animated background elements for a premium feel */
+        .circle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Success Card */
+        .success-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             text-align: center;
-            width: 350px;
+            width: 100%;
+            max-width: 500px;
+            z-index: 1;
+            animation: fadeIn 0.8s ease-out;
         }
-        h2 {
-            font-size: 24px;
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hi-text {
+            font-size: 22px;
+            color: #ddd;
             margin-bottom: 10px;
         }
-        .success-highlight {
-            font-size: 45px;
-            font-weight: bold;
-            color: #28a745;
-            display: block;
+
+        /* Big Highlighted Congratulations */
+        .congrats-text {
+            font-size: 50px;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #00ff87, #60efff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin: 20px 0;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            letter-spacing: 2px;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 135, 0.3));
         }
-        .author {
+
+        .sub-text {
             font-size: 18px;
-            color: #ccc;
+            color: #eee;
             margin-bottom: 30px;
         }
-        .back-btn {
-            background-color: #555;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .author-name {
+            font-size: 16px;
+            color: #00d2ff;
             font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
+            margin-top: 10px;
         }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 35px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+
         .back-btn:hover {
-            background-color: #ff4500;
+            background: #fff;
+            color: #1e3c72;
             transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>DIAMOMD SENT SUCCESSFULLY TO ACCOUNT</h2>
-        
-        <span class="success-highlight">CONGRULATIONS</span>
-        
-        <p class="author">By Gopal</p>
+    <div class="circle" style="width: 200px; height: 200px; top: 10%; left: 10%;"></div>
+    <div class="circle" style="width: 300px; height: 300px; bottom: -5%; right: -5%;"></div>
 
-        <a href="index.html" class="back-btn">Go Back</a>
+    <div class="success-card">
+        <div class="hi-text">Hi Bro</div>
+        
+        <div class="congrats-text">CONGRATULATIONS</div>
+        
+        <div class="sub-text">Your request has been submitted!</div>
+
+        <div class="author-name">By Gopal</div>
+
+        <br>
+        <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
 
 </body>
