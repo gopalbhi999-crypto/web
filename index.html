@@ -68,6 +68,7 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             padding: 10px;
+            margin-bottom: 40px; /* Space for the button below */
         }
 
         /* Services Cards with Stylish Borders */
@@ -99,6 +100,28 @@
         .icon {
             font-size: 2rem;
             margin-bottom: 12px;
+        }
+
+        /* New More Info Button Style */
+        .btn-more-info {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #ffe600;
+            color: #000046;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 230, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-more-info:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
         }
 
         footer {
@@ -151,6 +174,8 @@
             Ration Card & Birth Certificate
         </div>
     </div>
+
+    <a href="f.html" class="btn-more-info">More Info</a>
 
     <footer>
         <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
