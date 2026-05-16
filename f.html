@@ -1,120 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congratulations - Success</title>
+    <title>Contact Us - Pradeep Cyber Cafe</title>
     <style>
-        /* Full screen background matching the index page */
-        body, html {
-            height: 100%;
+        * {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            color: white;
-            overflow: hidden;
+            justify-content: center;
         }
 
-        /* Animated background elements for a premium feel */
-        .circle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        /* Success Card */
-        .success-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            padding: 50px 40px;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            text-align: center;
-            width: 100%;
+        .contact-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid #00f2fe;
+            border-radius: 20px;
+            padding: 40px 30px;
             max-width: 500px;
-            z-index: 1;
-            animation: fadeIn 0.8s ease-out;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hi-text {
-            font-size: 22px;
-            color: #ddd;
-            margin-bottom: 10px;
-        }
-
-        /* Big Highlighted Congratulations */
-        .congrats-text {
-            font-size: 50px;
-            font-weight: 800;
-            background: linear-gradient(to bottom, #00ff87, #60efff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 20px 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            filter: drop-shadow(0 0 10px rgba(0, 255, 135, 0.3));
-        }
-
-        .sub-text {
-            font-size: 18px;
-            color: #eee;
+        h1 {
+            font-size: 2.2rem;
+            color: #fff;
             margin-bottom: 30px;
+            border-bottom: 2px solid #ffe600;
+            padding-bottom: 10px;
         }
 
-        .author-name {
-            font-size: 16px;
-            color: #00d2ff;
+        .info-section {
+            margin-bottom: 25px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffe600;
+        }
+
+        .info-title {
+            font-size: 1.1rem;
+            color: #ffe600;
             font-weight: bold;
-            margin-top: 10px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Back Button */
-        .back-btn {
+        .info-text {
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 35px;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
+            padding: 12px 30px;
+            background: #ffe600;
+            color: #000046;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: 0.3s;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 230, 0, 0.3);
         }
 
-        .back-btn:hover {
+        .btn:hover {
             background: #fff;
-            color: #1e3c72;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <div class="circle" style="width: 200px; height: 200px; top: 10%; left: 10%;"></div>
-    <div class="circle" style="width: 300px; height: 300px; bottom: -5%; right: -5%;"></div>
+    <div class="contact-card">
+        <h1>Contact & Address</h1>
 
-    <div class="success-card">
-        <div class="hi-text">THANKS FOR VISIT</div>
-        
-        <div class="congrats-text">CONGRATULATIONS</div>
-        
-        <div class="sub-text">Your request has been submitted!</div>
+        <div class="info-section">
+            <div class="info-title">📍 Shop Address:</div>
+            <div class="info-text">
+                Pradeep Cyber Cafe<br>
+                Main Bazar, Dibiyapur,<br>
+                Auraiya, Uttar Pradesh - 206244
+            </div>
+        </div>
 
-        <div class="author-name">By Gopal</div>
+        <div class="info-section">
+            <div class="info-title">📞 Phone Number:</div>
+            <div class="info-text">+91 XXXXXXXXXX</div>
+        </div>
 
-        <br>
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <div class="info-section">
+            <div class="info-title">✉️ Email Address:</div>
+            <div class="info-text">cybercafe625@gmail.com</div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-title">⏰ Opening Hours:</div>
+            <div class="info-text">Morning 09:00 AM to Evening 08:00 PM</div>
+        </div>
+
+        <a href="index.html" class="btn">Go Back Home</a>
     </div>
 
 </body>
