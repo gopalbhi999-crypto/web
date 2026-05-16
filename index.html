@@ -1,150 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Diamond Hub</title>
+    <title>Pradeep Cyber Cafe - Dibiyapur, Auraiya</title>
     <style>
-        /* Full screen background with premium gradient */
-        body, html {
-            height: 100%;
+        * {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Beautiful Multi-color Gradient Background */
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #ffe600;
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .services-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #ffe600;
+            padding-bottom: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        /* Services Cards with Stylish Borders */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 2px solid #00f2fe; /* Glowing Cyan Border */
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
         }
 
-        /* Main Container */
-        .main-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            width: 100%;
-            max-width: 450px;
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffe600; /* Hover karne par border yellow ho jayega */
+            box-shadow: 0 8px 25px rgba(0,242,254,0.4);
         }
 
-        .logo-box {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: #00d2ff;
-            text-shadow: 0 0 10px #00d2ff;
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
         }
 
-        h1 {
-            font-size: 22px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        /* Input Styles */
-        .input-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #ddd;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: none;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
-            font-size: 16px;
-            box-sizing: border-box; /* Ensure padding doesn't affect width */
-        }
-
-        /* Button Style */
-        .submit-btn {
-            background: linear-gradient(to right, #00d2ff, #3a7bd5);
-            color: white;
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-
-        .submit-btn:hover {
-            filter: brightness(1.2);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
-        }
-
-        /* Footer Text */
-        .footer-text {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #bbb;
-        }
-
-        .gopal-text {
-            font-weight: bold;
-            color: #00d2ff;
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
         }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <div class="logo-box">FREE FIRE</div>
-        <h1>FREE DIAMOND</h1>
+    <header>
+        <h1>Pradeep Cyber Cafe</h1>
+        <p>📍 Dibiyapur, Auraiya</p>
+    </header>
 
-        <div class="input-group">
-            <label>Enter Player UID:</label>
-            <input type="text" id="uid" placeholder="Example: 123456789">
+    <h2 class="services-title">Hamari Services</h2>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon">🖨️</div>
+            Photocopy & Printing
         </div>
-
-        <div class="input-group">
-            <label>Diamond Amount (Max 10000):</label>
-            <input type="number" id="diamonds" placeholder="Example: 5000" min="1" max="10000">
+        <div class="card">
+            <div class="icon">📝</div>
+            Online Form Submission
         </div>
-
-        <a href="f.html" class="submit-btn" onclick="return validate()">CLAIM NOW</a>
-
-        <div class="footer-text">
-            <p>By <span class="gopal-text">Gopal</span></p>
-            <p>Hello</p>
+        <div class="card">
+            <div class="icon">📄</div>
+            Lamination & Binding
+        </div>
+        <div class="card">
+            <div class="icon">🆔</div>
+            Aadhaar & PAN Card
+        </div>
+        <div class="card">
+            <div class="icon">🎫</div>
+            Train & Air Ticket
+        </div>
+        <div class="card">
+            <div class="icon">📱</div>
+            Mobile & DTH Recharge
+        </div>
+        <div class="card">
+            <div class="icon">🎓</div>
+            Result & Admit Card
+        </div>
+        <div class="card">
+            <div class="icon">💼</div>
+            Ration Card & Birth Certificate
         </div>
     </div>
 
-    <script>
-        function validate() {
-            var uid = document.getElementById('uid').value;
-            var diam = document.getElementById('diamonds').value;
-
-            if (uid === "" || diam === "") {
-                alert("Please fill all fields!");
-                return false;
-            }
-            if (diam > 10000) {
-                alert("Limit is 10000 diamonds!");
-                return false;
-            }
-            return true;
-        }
-    </script>
+    <footer>
+        <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
