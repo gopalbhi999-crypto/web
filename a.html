@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Services - Pradeep Cyber Cafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Same Beautiful Multi-color Gradient Background */
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffe600;
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .services-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #ffe600;
+            padding-bottom: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+        /* Ticket Service Cards */
+        .ticket-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 2px solid #00f2fe;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .ticket-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffe600;
+            box-shadow: 0 8px 25px rgba(0,242,254,0.4);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .ticket-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Action Buttons inside Cards */
+        .btn-action {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background: #ffe600;
+            color: #000046;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 230, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        .btn-action:hover {
+            background: #ffffff;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Back Button Style */
+        .btn-back {
+            display: inline-block;
+            padding: 10px 30px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: #ffffff;
+            color: #000046;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pradeep Cyber Cafe</h1>
+        <p>🎫 Train & Air Ticket Services</p>
+    </header>
+
+    <h2 class="services-title">Choose Ticket Type</h2>
+
+    <div class="container">
+        <div class="ticket-card">
+            <div>
+                <div class="icon">🚂</div>
+                <h3>Train Ticket Enquiry</h3>
+            </div>
+            <a href="https://www.indianrail.gov.in/enquiry/FARE/FareEnquiry.html?locale=en" target="_blank" class="btn-action">
+                Calculate Fare Price
+            </a>
+        </div>
+
+        <div class="ticket-card">
+            <div>
+                <div class="icon">✈️</div>
+                <h3>Air Flight Booking</h3>
+            </div>
+            <a href="https://www.skyscanner.co.in/flights?gclsrc=aw.ds&&utm_source=google&utm_medium=cpc&utm_campaign=IN-Flights-Search-EN-DSA&utm_term=DYNAMIC+SEARCH+ADS&associateID=SEM_FLI_19465_00000&campaign_id=10628714832&adgroupid=106417916338&keyword_id=dsa-930264671985&gad_source=1&gad_campaignid=10628714832&gbraid=0AAAAAD3oWFgshktHxB56n7SciK6ekCQhG&gclid=Cj0KCQjwoMXQBhDcARIsAH-eEtu0Mf-JSn3Z_Fumoc_AvK3H1x0P12_3v-PZGy07k5p6OB56Q2xDnaAaAqd7EALw_wcB" target="_blank" class="btn-action">
+                Book Flight Ticket
+            </a>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-back">← Go Back</a>
+
+    <footer>
+        <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
