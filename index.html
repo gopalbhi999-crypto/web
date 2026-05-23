@@ -50,7 +50,7 @@
             margin-top: 10px;
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-            margin-bottom: 20px; /* Space before WhatsApp button */
+            margin-bottom: 20px;
         }
 
         /* Highly Highlighted WhatsApp Button */
@@ -60,7 +60,7 @@
             justify-content: center;
             gap: 10px;
             padding: 12px 25px;
-            background: #25D366; /* WhatsApp Green */
+            background: #25D366;
             color: #ffffff;
             text-decoration: none;
             font-size: 1.2rem;
@@ -71,26 +71,19 @@
             border: 2px solid #ffffff;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            animation: pulse 2s infinite; /* Attention-grabbing animation */
+            animation: pulse 2s infinite;
         }
 
         .btn-whatsapp:hover {
-            background: #128C7E; /* Darker WhatsApp Green */
+            background: #128C7E;
             transform: scale(1.05);
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8);
         }
 
-        /* Pulse animation for high visibility */
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         .services-title {
@@ -122,12 +115,15 @@
             text-align: center;
             font-size: 1.1rem;
             font-weight: 600;
+            color: #ffffff;
+            text-decoration: none; /* Link underline hatane ke liye */
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
 
         .card:hover {
@@ -135,6 +131,11 @@
             background: rgba(255, 255, 255, 0.25);
             border-color: #ffe600;
             box-shadow: 0 8px 25px rgba(0,242,254,0.4);
+        }
+
+        /* Printing Button Ke Liye Extra Styling (Yellow Hover Border + Scale Effect) */
+        .card-btn-printing {
+            border-color: #ffe600; /* Iska border pehle se thoda alag dikhega */
         }
 
         .icon {
@@ -184,10 +185,11 @@
     <h2 class="services-title">Hamari Services</h2>
 
     <div class="container">
-        <div class="card">
+        <a href="k.html" class="card card-btn-printing">
             <div class="icon">🖨️</div>
             Photocopy & Printing
-        </div>
+        </a>
+
         <div class="card">
             <div class="icon">📝</div>
             Online Form Submission
