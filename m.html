@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working - Pradeep Cyber Cafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Same Beautiful Multi-color Gradient Background */
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .working-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            max-width: 550px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-animation {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: gearRotate 3s linear infinite;
+        }
+
+        @keyframes gearRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffe600;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* Pulse Highlight effect for the update text */
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 242, 254, 0.2);
+            border: 1px solid #00f2fe;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Back Button Style */
+        .btn-back {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #ffe600;
+            color: #000046;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 230, 0, 0.4);
+            text-transform: uppercase;
+        }
+
+        .btn-back:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="working-container">
+        <div class="icon-animation">⚙️</div>
+        
+        <h1>Working...</h1>
+        
+        <div class="status-badge">Under Construction</div>
+        
+        <p>इस सर्विस पर अभी काम चल रहा है और इसे जल्द ही शुरू कर दिया जाएगा। किसी भी तुरंत सहायता के लिए आप हमारे मुख्य पेज पर जाकर हमसे संपर्क कर सकते हैं।</p>
+        
+        <a href="index.html" class="btn-back">← Go Back Home</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
