@@ -50,49 +50,22 @@
             margin-top: 10px;
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
-        }
-
-        /* Glowing WhatsApp Button */
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 25px;
-            background: #25D366;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-            border: 2px solid #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            animation: pulse 2s infinite;
-        }
-
-        .btn-whatsapp:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8);
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         .info-title {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
             border-bottom: 3px solid #ffe600;
             padding-bottom: 5px;
+        }
+
+        .instruction-text {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            text-align: center;
         }
 
         .price-container {
@@ -104,17 +77,29 @@
             margin-bottom: 40px;
         }
 
-        /* Price Cards */
-        .price-card {
+        /* Price Cards converted into clickable buttons */
+        .price-btn-card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(5px);
             border: 2px solid #00f2fe;
             border-radius: 15px;
-            padding: 20px 30px;
+            padding: 22px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect to make it feel like a premium button */
+        .price-btn-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffe600;
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.4);
         }
 
         .price-info {
@@ -132,22 +117,10 @@
             text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
         }
 
-        .action-area {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .action-text {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
         /* Back Button Style */
         .btn-back {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 10px;
             padding: 10px 30px;
             background: transparent;
             color: #ffffff;
@@ -177,33 +150,24 @@
     <header>
         <h1>Pradeep Cyber Cafe</h1>
         <p>🖨️ Photocopy & Printing Services</p>
-        <a href="https://wa.me/919927228476?text=Hello,%20I%20want%20to%20send%20a%20document/image%20for%20printing." target="_blank" class="btn-whatsapp">
-            📲 Send Photo To WhatsApp
-        </a>
     </header>
 
     <h2 class="info-title">Printing Rate List</h2>
+    <p class="instruction-text">(रेट पर क्लिक करके सीधे WhatsApp पर ऑर्डर भेजें)</p>
 
     <div class="price-container">
-        <div class="price-card">
+        <a href="https://wa.me/919927228476?text=Colourless%20Print" target="_blank" class="price-btn-card">
             <div class="price-info">
                 <span>📄</span> Colourless (B&W) Print
             </div>
             <div class="price-tag">₹2 / page</div>
-        </div>
+        </a>
 
-        <div class="price-card">
+        <a href="https://wa.me/919927228476?text=Coloured%20Print" target="_blank" class="price-btn-card">
             <div class="price-info">
                 <span>🌈</span> Coloured Print
             </div>
             <div class="price-tag">₹10 / page</div>
-        </div>
-    </div>
-
-    <div class="action-area">
-        <p class="action-text">अपनी फोटो या डॉक्यूमेंट अभी प्रिंट करने के लिए नीचे बटन पर क्लिक करें:</p>
-        <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20I%20am%20sending%20the%20images%20for%20printing.%20Please%20check." target="_blank" class="btn-whatsapp" style="font-size: 1.3rem; padding: 15px 35px;">
-            💬 WhatsApp पर फोटो भेजें
         </a>
     </div>
 
