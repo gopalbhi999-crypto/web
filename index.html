@@ -50,6 +50,47 @@
             margin-top: 10px;
             font-weight: 600;
             text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            margin-bottom: 20px; /* Space before WhatsApp button */
+        }
+
+        /* Highly Highlighted WhatsApp Button */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: #25D366; /* WhatsApp Green */
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            border: 2px solid #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite; /* Attention-grabbing animation */
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E; /* Darker WhatsApp Green */
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8);
+        }
+
+        /* Pulse animation for high visibility */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
 
         .services-title {
@@ -68,14 +109,14 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             padding: 10px;
-            margin-bottom: 40px; /* Space for the button below */
+            margin-bottom: 40px;
         }
 
         /* Services Cards with Stylish Borders */
         .card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(5px);
-            border: 2px solid #00f2fe; /* Glowing Cyan Border */
+            border: 2px solid #00f2fe;
             border-radius: 15px;
             padding: 25px 20px;
             text-align: center;
@@ -89,11 +130,10 @@
             align-items: center;
         }
 
-        /* Hover Effect */
         .card:hover {
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.25);
-            border-color: #ffe600; /* Hover karne par border yellow ho jayega */
+            border-color: #ffe600;
             box-shadow: 0 8px 25px rgba(0,242,254,0.4);
         }
 
@@ -102,7 +142,7 @@
             margin-bottom: 12px;
         }
 
-        /* New More Info Button Style */
+        /* More Info Button Style */
         .btn-more-info {
             display: inline-block;
             padding: 14px 40px;
@@ -136,6 +176,9 @@
     <header>
         <h1>Pradeep Cyber Cafe</h1>
         <p>📍 Dibiyapur, Auraiya</p>
+        <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20I%20want%20to%20send%20an%20image%20for%20printing." target="_blank" class="btn-whatsapp">
+            📲 Send Image To WhatsApp
+        </a>
     </header>
 
     <h2 class="services-title">Hamari Services</h2>
