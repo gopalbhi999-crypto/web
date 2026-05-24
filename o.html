@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent Passport Size Photo</title>
+    <style>
+        /* Modern Gradient Background like the reference */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* Pricing Cards Layout */
+        .pricing-grid {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(192, 132, 252, 0.2);
+            border-color: rgba(192, 132, 252, 0.4);
+        }
+
+        /* Decorative icon placeholder */
+        .photo-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #f8fafc;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin: 15px 0;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 30px 0;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
+            color: #0f172a;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Urgent Passport Size Photo</h1>
+        <p class="subtitle">High quality instant photos standard size (3.5 x 4.5 cm)</p>
+
+        <div class="pricing-grid">
+            <div class="card">
+                <div class="photo-icon">📸</div>
+                <h2>6 Photos</h2>
+                <div class="price"><span class="currency">₹</span>30</div>
+                <ul class="features">
+                    <li>Instant Printing</li>
+                    <li>Premium Glossy Paper</li>
+                    <li>Background Correction</li>
+                </ul>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="card">
+                <div class="photo-icon">📷</div>
+                <h2>12 Photos</h2>
+                <div class="price"><span class="currency">₹</span>50</div>
+                <ul class="features">
+                    <li>Instant Printing</li>
+                    <li>Premium Glossy Paper</li>
+                    <li>Background Correction</li>
+                    <li>Best Value Pack</li>
+                </ul>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
