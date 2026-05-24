@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Review - Pradeep Cyber Cafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #fff;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ffe600;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border: 2px solid #00f2fe;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffe600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #ffe600;
+            color: #000046;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 230, 0, 0.3);
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Review Display Styles */
+        .live-reviews-section {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .live-reviews-section h3 {
+            color: #ffe600;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+        }
+
+        .review-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #00f2fe;
+        }
+
+        .review-item-name {
+            font-weight: bold;
+            color: #ffe600;
+        }
+
+        .review-item-stars {
+            color: #ffcc00;
+            font-size: 0.85rem;
+            margin: 3px 0;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .btn-back:hover {
+            color: #ffe600;
+            border-color: #ffe600;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pradeep Cyber Cafe</h1>
+        <p>✍️ Share Your Feedback / Review</p>
+    </header>
+
+    <div class="form-container">
+        <form id="reviewForm" onsubmit="saveReview(event)">
+            <div class="form-group">
+                <label for="name">अपना नाम लिखें (Your Name):</label>
+                <input type="text" id="name" placeholder="उदा. Rahul Kumar" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">स्टार रेटिंग चुनें (Rating):</label>
+                <select id="rating" required>
+                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ (Excellent)</option>
+                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ (Good)</option>
+                    <option value="⭐⭐⭐">⭐⭐⭐ (Average)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">अपना रिव्यू लिखें (Your Review):</label>
+                <textarea id="message" placeholder="आपको हमारी सर्विसेज कैसी लगीं..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="live-reviews-section">
+        <h3>Latest Reviews on this Device:</h3>
+        <div id="reviewsList">
+            <p style="color: rgba(255,255,255,0.5); font-size: 0.95rem;">अभी तक कोई नया रिव्यू नहीं लिखा गया है।</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-back">← Go Back to Home</a>
+
+    <footer>
+        <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to load and display saved reviews when page opens
+        function displayReviews() {
+            const reviewsList = document.getElementById('reviewsList');
+            const savedReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+
+            if (savedReviews.length === 0) {
+                reviewsList.innerHTML = '<p style="color: rgba(255,255,255,0.5); font-size: 0.95rem;">अभी तक कोई नया रिव्यू नहीं लिखा गया है।</p>';
+                return;
+            }
+
+            // Display only latest 3 reviews
+            reviewsList.innerHTML = '';
+            savedReviews.slice(-3).reverse().forEach(review => {
+                reviewsList.innerHTML += `
+                    <div class="review-item">
+                        <div class="review-item-name">${review.name}</div>
+                        <div class="review-item-stars">${review.rating}</div>
+                        <div style="font-size: 0.95rem; color: #e0e0e0;">${review.message}</div>
+                    </div>
+                `;
+            });
+        }
+
+        // Function to save new review locally
+        function saveReview(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const rating = document.getElementById('rating').value;
+            const message = document.getElementById('message').value;
+
+            const newReview = { name, rating, message };
+
+            // Get existing reviews, add new one, and save back
+            let savedReviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+            savedReviews.push(newReview);
+            localStorage.setItem('cafeReviews', JSON.stringify(savedReviews));
+
+            // Clear form inputs
+            document.getElementById('reviewForm').reset();
+
+            // Refresh the display list instantly
+            displayReviews();
+        }
+
+        // Load reviews automatically when page opens
+        window.onload = displayReviews;
+    </script>
+
+</body>
+</html>
