@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working - Pradeep Cyber Cafe</title>
+    <title>Aadhaar & PAN Card Services - Pradeep Cyber Cafe</title>
     <style>
         * {
             margin: 0;
@@ -20,112 +20,266 @@
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
         }
 
-        .working-container {
+        header {
+            text-align: center;
+            margin-bottom: 40px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 50px 30px;
+            padding: 30px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            max-width: 550px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
             width: 100%;
-            animation: fadeIn 1s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .icon-animation {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: gearRotate 3s linear infinite;
-        }
-
-        @keyframes gearRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        h1 {
+        header h1 {
             font-size: 2.5rem;
-            color: #ffe600;
+            color: #fff;
             text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
             font-weight: 800;
-            margin-bottom: 15px;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        p {
+        header p {
             font-size: 1.2rem;
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        /* Pulse Highlight effect for the update text */
-        .status-badge {
-            display: inline-block;
-            background: rgba(0, 242, 254, 0.2);
-            border: 1px solid #00f2fe;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
+            color: #ffe600;
+            margin-top: 10px;
             font-weight: 600;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
         }
 
-        /* Back Button Style */
-        .btn-back {
-            display: inline-block;
-            padding: 12px 35px;
-            background: #ffe600;
-            color: #000046;
+        .services-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #ffe600;
+            padding-bottom: 5px;
+        }
+
+        .main-container {
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Service Blocks */
+        .service-block {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border: 2px solid #00f2fe;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .service-block:hover {
+            transform: translateY(-5px);
+            border-color: #ffe600;
+            box-shadow: 0 12px 30px rgba(0, 242, 254, 0.3);
+        }
+
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+
+        .block-icon {
+            font-size: 2.5rem;
+        }
+
+        .block-header h2 {
+            font-size: 1.6rem;
+            color: #ffe600;
+        }
+
+        /* Work List */
+        .work-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .work-list li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .work-list li::before {
+            content: "✓";
+            color: #00f2fe;
+            font-weight: bold;
+        }
+
+        /* Price Tag Elements */
+        .price-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .price-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .price-value {
+            color: #ffe600;
+            font-weight: 800;
+        }
+
+        /* WhatsApp Button inside Blocks */
+        .btn-block-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            background: #25D366;
+            color: #ffffff;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 30px;
+            border-radius: 25px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(255, 230, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             text-transform: uppercase;
+        }
+
+        .btn-block-wa:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+        }
+
+        /* General Back Button */
+        .btn-back {
+            display: inline-block;
+            padding: 10px 30px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
         }
 
         .btn-back:hover {
             background: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+            color: #000046;
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: auto;
+            padding-top: 40px;
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.7);
         }
     </style>
 </head>
 <body>
 
-    <div class="working-container">
-        <div class="icon-animation">⚙️</div>
+    <header>
+        <h1>Pradeep Cyber Cafe</h1>
+        <p>🆔 Aadhaar & PAN Card Official Services</p>
+    </header>
+
+    <h2 class="services-title">Our Services & Rates</h2>
+
+    <div class="main-container">
         
-        <h1>Working...</h1>
-        
-        <div class="status-badge">Under Construction</div>
-        
-        <p>इस सर्विस पर अभी काम चल रहा है और इसे जल्द ही शुरू कर दिया जाएगा। किसी भी तुरंत सहायता के लिए आप हमारे मुख्य पेज पर जाकर हमसे संपर्क कर सकते हैं।</p>
-        
-        <a href="index.html" class="btn-back">← Go Back Home</a>
+        <div class="service-block">
+            <div>
+                <div class="block-header">
+                    <div class="block-icon">🪪</div>
+                    <h2>Aadhaar Card Work</h2>
+                </div>
+                <ul class="work-list">
+                    <li>नया आधार कार्ड डाउनलोड करना</li>
+                    <li>आधार कार्ड में सुधार/अपडेट स्थिति जांचना</li>
+                    <li>खोया हुआ आधार नंबर खोजना</li>
+                    <li>बायोमेट्रिक लॉक/अनलॉक करना</li>
+                    <li>पता बदलने के लिए ऑनलाइन आवेदन</li>
+                </ul>
+            </div>
+            <div>
+                <div class="price-section">
+                    <div class="price-row">
+                        <span>Laminated Print:</span>
+                        <span class="price-value">₹50</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Original PVC Card:</span>
+                        <span class="price-value">₹100</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/919927228476?text=Aadhaar%20Card%20Work" target="_blank" class="btn-block-wa">
+                    💬 Aadhaar Order on WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <div>
+                <div class="block-header">
+                    <div class="block-icon">💳</div>
+                    <h2>PAN Card Work</h2>
+                </div>
+                <ul class="work-list">
+                    <li>नया पैन कार्ड ऑनलाइन आवेदन (New PAN)</li>
+                    <li>पैन कार्ड में सुधार (नाम, जन्मतिथि, फोटो)</li>
+                    <li>आधार-पैन लिंक स्थिति जांचना व लिंक करना</li>
+                    <li>ई-पैन कार्ड डाउनलोड (e-PAN Download)</li>
+                    <li>खोया हुआ पैन कार्ड दोबारा प्रिंट करना</li>
+                </ul>
+            </div>
+            <div>
+                <div class="price-section">
+                    <div class="price-row">
+                        <span>Laminated Print:</span>
+                        <span class="price-value">₹50</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Original PVC Card:</span>
+                        <span class="price-value">₹100</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/919927228476?text=PAN%20Card%20Work" target="_blank" class="btn-block-wa">
+                    💬 PAN Order on WhatsApp
+                </a>
+            </div>
+        </div>
+
     </div>
+
+    <a href="index.html" class="btn-back">← Go Back</a>
 
     <footer>
         <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
