@@ -132,7 +132,6 @@
             box-shadow: 0 8px 25px rgba(0,242,254,0.4);
         }
 
-        /* Border highlights for active buttons */
         .card-btn-active {
             border-color: #ffe600;
             cursor: pointer;
@@ -157,12 +156,80 @@
             box-shadow: 0 5px 20px rgba(255, 230, 0, 0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 50px;
         }
 
         .btn-more-info:hover {
             background: #ffffff;
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+        }
+
+        /* --- New Review Section Styles --- */
+        .reviews-section {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .review-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid #ffe600;
+            padding: 15px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            color: #ffe600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .review-stars {
+            color: #ffcc00;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+
+        .btn-write-review {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            color: #00f2fe;
+            border: 2px solid #00f2fe;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-write-review:hover {
+            background: #00f2fe;
+            color: #000046;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
         }
 
         footer {
@@ -226,6 +293,32 @@
     </div>
 
     <a href="f.html" class="btn-more-info">More Info</a>
+
+    <section class="reviews-section">
+        <h2 class="services-title" style="font-size: 1.5rem; margin-bottom: 15px;">Customer Reviews</h2>
+        
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="reviewer-name">Rahul Kumar</div>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-text">दिबियापुर में सबसे बेस्ट साइबर कैफे! प्रदीप भाई फॉर्म बहुत ध्यान से और बिना किसी गलती के भरते हैं।</div>
+            </div>
+            
+            <div class="review-card">
+                <div class="reviewer-name">Amit Sharma</div>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-text">यहाँ फोटो प्रिंटिंग की क्वालिटी बहुत बढ़िया है। काम बहुत जल्दी हो जाता है।</div>
+            </div>
+
+            <div class="review-card">
+                <div class="reviewer-name">Vikas Savita</div>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <div class="review-text">आधार और पैन कार्ड का काम कराने के लिए सबसे भरोसेमंद दुकान। व्यवहार भी बहुत अच्छा है।</div>
+            </div>
+        </div>
+
+        <a href="j.html" class="btn-write-review">✍️ Write a Review</a>
+    </section>
 
     <footer>
         <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
