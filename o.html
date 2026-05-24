@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urgent Passport Size Photo</title>
+    <title>Urgent Passport Size Photo - Pradeep Cyber Cafe</title>
     <style>
         /* Modern Gradient Background like the reference */
         body {
@@ -14,6 +14,7 @@
             color: #ffffff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -27,12 +28,22 @@
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             background: linear-gradient(to right, #38bdf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Highlighted Cyber Cafe Name Style */
+        .cafe-name {
+            font-size: 1.4rem;
+            color: #ffe600;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(255, 230, 0, 0.3);
         }
 
         .subtitle {
@@ -47,6 +58,7 @@
             gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
 
         .card {
@@ -59,6 +71,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
@@ -99,21 +114,64 @@
             color: #cbd5e1;
             font-size: 0.95rem;
             line-height: 1.6;
+            text-align: left;
+            padding-left: 20px;
         }
 
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #38bdf8 0%, #c084fc 100%);
-            color: #0f172a;
-            padding: 12px 35px;
+        .features li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #38bdf8;
+            position: absolute;
+            left: -20px;
+            font-weight: bold;
+        }
+
+        /* WhatsApp Button Style */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #25D366;
+            color: #ffffff;
+            padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            text-transform: uppercase;
+            font-size: 0.95rem;
         }
 
-        .btn:hover {
-            opacity: 0.9;
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Back Button Style */
+        .btn-back {
+            display: inline-block;
+            padding: 10px 30px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: #ffffff;
+            color: #0f172a;
         }
     </style>
 </head>
@@ -121,34 +179,45 @@
 
     <div class="container">
         <h1>Urgent Passport Size Photo</h1>
+        <div class="cafe-name">Pradeep Cyber Cafe</div>
         <p class="subtitle">High quality instant photos standard size (3.5 x 4.5 cm)</p>
 
         <div class="pricing-grid">
             <div class="card">
-                <div class="photo-icon">📸</div>
-                <h2>6 Photos</h2>
-                <div class="price"><span class="currency">₹</span>30</div>
-                <ul class="features">
-                    <li>Instant Printing</li>
-                    <li>Premium Glossy Paper</li>
-                    <li>Background Correction</li>
-                </ul>
-                <a href="#" class="btn">Order Now</a>
+                <div>
+                    <div class="photo-icon">📸</div>
+                    <h2>6 Photos</h2>
+                    <div class="price"><span class="currency">₹</span>30</div>
+                    <ul class="features">
+                        <li>Instant Printing</li>
+                        <li>Premium Glossy Paper</li>
+                        <li>Background Correction</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20I%20want%20to%20order%206%20Passport%20Photos." target="_blank" class="btn-whatsapp">
+                    💬 Order 6 Photos
+                </a>
             </div>
 
             <div class="card">
-                <div class="photo-icon">📷</div>
-                <h2>12 Photos</h2>
-                <div class="price"><span class="currency">₹</span>50</div>
-                <ul class="features">
-                    <li>Instant Printing</li>
-                    <li>Premium Glossy Paper</li>
-                    <li>Background Correction</li>
-                    <li>Best Value Pack</li>
-                </ul>
-                <a href="#" class="btn">Order Now</a>
+                <div>
+                    <div class="photo-icon">📷</div>
+                    <h2>12 Photos</h2>
+                    <div class="price"><span class="currency">₹</span>50</div>
+                    <ul class="features">
+                        <li>Instant Printing</li>
+                        <li>Premium Glossy Paper</li>
+                        <li>Background Correction</li>
+                        <li>Best Value Pack</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20I%20want%20to%20order%2012%20Passport%20Photos." target="_blank" class="btn-whatsapp">
+                    💬 Order 12 Photos
+                </a>
             </div>
         </div>
+
+        <a href="index.html" class="btn-back">← Go Back Home</a>
     </div>
 
 </body>
