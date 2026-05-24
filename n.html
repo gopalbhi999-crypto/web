@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working - Pradeep Cyber Cafe</title>
+    <title>Results & Admit Cards - Pradeep Cyber Cafe</title>
     <style>
         * {
             margin: 0;
@@ -13,119 +13,261 @@
         }
 
         body {
-            /* Same Beautiful Multi-color Gradient Background */
+            /* Same Premium Multi-color Gradient Background */
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #000046 100%);
             min-height: 100vh;
             color: #ffffff;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
         }
 
-        .working-container {
+        header {
+            text-align: center;
+            margin-bottom: 40px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 50px 30px;
+            padding: 25px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            max-width: 550px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
             width: 100%;
-            animation: fadeIn 1s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .icon-animation {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: gearRotate 3s linear infinite;
-        }
-
-        @keyframes gearRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #ffe600;
+        header h1 {
+            font-size: 2.4rem;
+            color: #fff;
             text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
             font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        p {
+        header p {
             font-size: 1.2rem;
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        /* Pulse Highlight effect for the update text */
-        .status-badge {
-            display: inline-block;
-            background: rgba(0, 242, 254, 0.2);
-            border: 1px solid #00f2fe;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
+            color: #ffe600;
+            margin-top: 5px;
             font-weight: 600;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
         }
 
-        /* Back Button Style */
+        .services-title {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #ffe600;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .grid-container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        /* Section Boxes */
+        .section-box {
+            background: rgba(255, 255, 255, 0.11);
+            backdrop-filter: blur(10px);
+            border: 2px solid #00f2fe;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .section-box h2 {
+            font-size: 1.5rem;
+            color: #ffe600;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Update List Item */
+        .update-item {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #ffe600;
+            transition: all 0.3s ease;
+        }
+
+        .update-item:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .update-info h3 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .update-info p {
+            font-size: 0.85rem;
+            color: #00f2fe;
+            font-weight: 600;
+        }
+
+        /* Small WhatsApp Button inside list */
+        .btn-check-wa {
+            background: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-check-wa:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* Quick Info Notice */
+        .notice-board {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 230, 0, 0.1);
+            border: 1px dashed #ffe600;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        /* Back Button */
         .btn-back {
             display: inline-block;
-            padding: 12px 35px;
-            background: #ffe600;
-            color: #000046;
+            padding: 10px 30px;
+            background: transparent;
+            color: #ffffff;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             border-radius: 30px;
+            border: 2px solid #ffffff;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(255, 230, 0, 0.4);
-            text-transform: uppercase;
         }
 
         .btn-back:hover {
             background: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+            color: #000046;
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: auto;
+            padding-top: 30px;
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.7);
         }
     </style>
 </head>
 <body>
 
-    <div class="working-container">
-        <div class="icon-animation">⚙️</div>
-        
-        <h1>Working...</h1>
-        
-        <div class="status-badge">Under Construction</div>
-        
-        <p>इस सर्विस पर अभी काम चल रहा है और इसे जल्द ही शुरू कर दिया जाएगा। किसी भी तुरंत सहायता के लिए आप हमारे मुख्य पेज पर जाकर हमसे संपर्क कर सकते हैं।</p>
-        
-        <a href="index.html" class="btn-back">← Go Back Home</a>
+    <header>
+        <h1>Pradeep Cyber Cafe</h1>
+        <p>🎓 Results & Admit Card Updates</p>
+    </header>
+
+    <h2 class="services-title">Latest Updates</h2>
+
+    <div class="notice-board">
+        📢 <b>छात्रों के लिए सूचना:</b> अपना रिजल्ट या एडमिट कार्ड घर बैठे व्हाट्सएप पर मंगाने के लिए संबंधित बटन पर क्लिक करें और अपना <b>रोल नंबर/रजिस्ट्रेशन नंबर</b> हमें भेजें।
     </div>
+
+    <div class="grid-container">
+        
+        <div class="section-box">
+            <h2>🏆 Latest Results</h2>
+            
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>UP Board 10th / 12th Result</h3>
+                    <p>Status: Available Now</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20UP%20Board%20ka%20Result%20check%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📲 Check Now
+                </a>
+            </div>
+
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>SSC GD Constable Result</h3>
+                    <p>Status: Merit List Out</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20SSC%20GD%20ka%20Result%20check%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📲 Check Now
+                </a>
+            </div>
+
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>CSJM Kanpur University Result</h3>
+                    <p>Status: All Semesters</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20Kanpur%20University%20ka%20Result%20check%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📲 Check Now
+                </a>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2>🎟️ Latest Admit Cards</h2>
+            
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>UP Police Constable Admit Card</h3>
+                    <p>Exam Date: Check Status</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20UP%20Police%20ka%20Admit%20Card%20download%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📥 Download
+                </a>
+            </div>
+
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>SSC CHSL Exam Admit Card</h3>
+                    <p>Region: Central Region (CR)</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20SSC%20CHSL%20ka%20Admit%20Card%20download%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📥 Download
+                </a>
+            </div>
+
+            <div class="update-item">
+                <div class="update-info">
+                    <h3>UP Scholarship Status 2026</h3>
+                    <p>Status: Check Correction</p>
+                </div>
+                <a href="https://wa.me/919927228476?text=Hello%20Pradeep%20Cyber%20Cafe,%20mujhe%20UP%20Scholarship%20ka%20Status%20check%20karwana%20hai." target="_blank" class="btn-check-wa">
+                    📲 Check Status
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn-back">← Go Back Home</a>
 
     <footer>
         <p>© 2026 Pradeep Cyber Cafe. All Rights Reserved.</p>
